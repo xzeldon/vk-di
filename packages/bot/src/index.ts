@@ -1,3 +1,1 @@
-import { works } from "../../core/src";
-
-works();
+console.log('sample')
