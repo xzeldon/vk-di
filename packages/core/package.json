@@ -1,0 +1,38 @@
+{
+    "name": "@vk-di/core",
+    "version": "1.0.0",
+    "description": "core",
+    "license": "MIT",
+    "author": {
+        "name": "Timofey (xzeldon)",
+        "email": "contact@zeldon.ru"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+git@github.com/xzeldon/vk-di.git",
+        "directory": "packages/core"
+    },
+    "keywords": [
+        "vk",
+        "api",
+        "bot",
+        "node",
+        "js",
+        "di",
+        "dependency injection"
+    ],
+    "files": [
+        "dist"
+    ],
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js"
+        }
+    },
+    "engines": {
+        "node": ">=12.0.0"
+    }
+}
