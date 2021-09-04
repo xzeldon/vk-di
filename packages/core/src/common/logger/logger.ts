@@ -125,7 +125,7 @@ export class Logger implements ILogger {
             ? `${color('Object:')}\n${JSON.stringify(message, null, 2)}\n`
             : color(message);
 
-        const pid_message = color(`[VK-DI] ${process.pid}   -`);
+        const pid_message = color(`[VK-DI] ${process.pid}   - `);
         const context_message = context ? yellow(`[${context}] `) : '';
         const timestamp_diff = this.update_and_get_timestamp_diff(is_time_diff_enabled);
         const instance = (this.instance as typeof Logger) ?? Logger;
