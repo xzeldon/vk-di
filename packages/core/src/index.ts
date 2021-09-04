@@ -1,3 +1,1 @@
-export function works() {
-    return console.log('it works!');
-}
+import 'reflect-metadata'
