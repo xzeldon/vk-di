@@ -1,7 +1,7 @@
 import { ContextTypes, ContextSubTypes } from 'vk-io';
 
-export function On(event_name: ContextTypes | ContextSubTypes): ClassDecorator {
-    return (target: object) => {
-        Reflect.defineMetadata('on:event', { name: event_name }, target);
+export function On(event_name: ContextTypes | ContextSubTypes): MethodDecorator {
+    return (target: object, key: string) => {
+        Reflect.defineMetadata('on:event', { name: event_name }, target, key);
     };
 }
