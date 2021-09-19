@@ -16,7 +16,7 @@ export class App {
                     this.logger.error('An unexpected error occurred while initializing the Module:', err);
                 }
             } catch (err) {
-                this.logger.error('Unexpected error:', err);
+                return this.logger.error('Unexpected error:', err);
             }
         }
         this.config.on_start!(this);
