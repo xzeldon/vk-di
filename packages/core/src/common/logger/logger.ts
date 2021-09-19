@@ -59,6 +59,7 @@ export class Logger implements ILogger {
             second: '2-digit',
             day: '2-digit',
             month: '2-digit',
+            hourCycle: 'h23'
         } as const;
 
         return new Date(Date.now()).toLocaleString(undefined, locale_string_config);
