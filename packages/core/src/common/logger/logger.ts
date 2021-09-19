@@ -17,7 +17,7 @@ export class Logger implements ILogger {
 
     constructor(
         protected context?: string,
-        private readonly isTimestampEnabled = false,
+        private readonly isTimestampEnabled = true,
     ) { }
 
     log(message: any, context?: string) {
@@ -137,7 +137,9 @@ export class Logger implements ILogger {
 
     private static update_and_get_timestamp_diff(is_time_diff_enabled?: boolean): string {
         const include_timestamp = Logger.lastTimestamp && is_time_diff_enabled;
-        return include_timestamp ? yellow(` +${Date.now() - Logger.lastTimestamp}ms`) : '';
+        const result = include_timestamp ? yellow(` +${Date.now() - Logger.lastTimestamp}ms`) : '';
+        Logger.lastTimestamp = Date.now();
+        return result;
     }
 
     private static print_stacktrace(trace: string) {
