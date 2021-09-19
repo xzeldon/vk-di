@@ -1,5 +1,6 @@
 import jsonPlugin from '@rollup/plugin-json';
 import typescriptPlugin from 'rollup-plugin-typescript2';
+import run from '@rollup/plugin-run';
 
 import { tmpdir } from 'os';
 import { builtinModules } from 'module';
@@ -7,7 +8,7 @@ import { join as pathJoin } from 'path';
 
 const MODULES = [
     'core',
-    'bot'
+    'simple-bot'
 ];
 
 const core_modules = builtinModules.filter(name => (
@@ -15,6 +16,8 @@ const core_modules = builtinModules.filter(name => (
 ));
 
 const cache_root = pathJoin(tmpdir(), '.rpt2_cache');
+
+const dev = process.env.ROLLUP_WATCH === 'true';
 
 const get_module_path = path => (
     pathJoin(__dirname, 'packages', path)
@@ -38,7 +41,8 @@ export default async () => (
                         rootDir: src,
                         include: [src]
                     }
-                })
+                }),
+                dev && run()
             ],
             external: [
                 ...Object.keys(mod_package.dependencies || {}),

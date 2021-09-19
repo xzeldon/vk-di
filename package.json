@@ -9,6 +9,7 @@
     },
     "devDependencies": {
         "@rollup/plugin-json": "^4.1.0",
+        "@rollup/plugin-run": "^2.1.0",
         "@types/node": "^16.7.10",
         "lerna": "^4.0.0",
         "rollup": "^2.56.3",

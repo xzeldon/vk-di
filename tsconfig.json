@@ -22,7 +22,7 @@
             "@core/*": [
                 "./packages/core/src"
             ],
-            "@bot/*": [
+            "@simple-bot/*": [
                 "./packages/bot/src/*"
             ]
         }
