@@ -1,7 +1,6 @@
 import { ContextSubTypes, ContextTypes, MessageContext, VK } from "vk-io";
 import { VKOptions } from "vk-io/lib/types";
-import { IClient, ICommandOptions, Logger } from "../common";
-import { ConfigureError } from "../common/errors/ConfigureError";
+import { ConfigureError, IClient, ICommandOptions, Logger } from "../common";
 import { Module } from "../module/Module";
 
 export class Client implements IClient {
