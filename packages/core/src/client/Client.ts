@@ -53,6 +53,7 @@ export class Client implements IClient {
             if (cmd_string instanceof RegExp) {
                 const passed = cmd_string.test(message.text!);
                 if (passed) {
+                    message.$match = message.text!.match(cmd_string)!;
                     handler.call(module, message);
                 }
             }
