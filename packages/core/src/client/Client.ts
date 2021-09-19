@@ -1,6 +1,7 @@
 import { ContextSubTypes, ContextTypes, MessageContext, VK } from "vk-io";
 import { VKOptions } from "vk-io/lib/types";
 import { IClient, ICommandOptions, Logger } from "../common";
+import { ConfigureError } from "../common/errors/ConfigureError";
 import { Module } from "../module/Module";
 
 export class Client implements IClient {
@@ -28,7 +29,11 @@ export class Client implements IClient {
         handler: () => any
     ): void {
         if (!command.trigger) {
-            return this.logger.error('The command trigger is not specified');
+            throw new ConfigureError('The command trigger is not specified');
+        }
+
+        if (typeof handler !== 'function') {
+            throw new ConfigureError('Handler must be a function');
         }
 
         const { options } = command;
@@ -37,9 +42,22 @@ export class Client implements IClient {
             ? options.prefix
             : module.config?.prefix;
 
-        const cmd_string = prefix === undefined ? command.trigger : `${prefix}${command.trigger}`;
+        let cmd_string: string | RegExp;
+
+        if (command.trigger instanceof RegExp && prefix) {
+            throw new ConfigureError(`Don\'t use prefix with RegExp as a command trigger.\nInstead, add the desired prefix directly to the regular expression.`);
+        }
+
+        cmd_string = prefix === undefined ? command.trigger : `${prefix}${command.trigger}`;
 
         this.bot.updates.on('message_new', (message: MessageContext) => {
+            if (cmd_string instanceof RegExp) {
+                const passed = cmd_string.test(message.text!);
+                if (passed) {
+                    handler.call(module, message);
+                }
+            }
+
             if (message.text === cmd_string) {
                 handler.call(module, message);
             }
