@@ -70,6 +70,7 @@ export class Client implements IClient {
             return true;
         } catch (err) {
             this.logger.error('An Error occured while gets Updates: ', err);
+            return false;
         }
     }
 }
