@@ -18,6 +18,14 @@
         "esModuleInterop": true,
         "experimentalDecorators": true,
         "removeComments": true,
+        "paths": {
+            "@core/*": [
+                "./packages/core/src"
+            ],
+            "@bot/*": [
+                "./packages/bot/src/*"
+            ]
+        }
     },
     "exclude": [
         "node_modules",
