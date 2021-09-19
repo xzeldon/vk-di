@@ -1,6 +1,9 @@
-import { COMMAND_METADATA, EVENT_METADATA, IClient, ICommandOptions } from "../common";
+import { COMMAND_METADATA, EVENT_METADATA, IClient, ICommandOptions, Logger } from "../common";
+import { cli_colors } from "../common/logger/cli-colors";
 
 export class Module {
+    private logger = new Logger('ModuleService');
+
     constructor(
         protected readonly client: IClient,
         public readonly config?: ICommandOptions
@@ -16,6 +19,7 @@ export class Module {
                     this,
                     this[method]
                 );
+                this.logger.log(`${cli_colors.magenta_bright(method)} method mapped successfully`);
             }
 
             if (Reflect.hasMetadata(EVENT_METADATA, this, method)) {
