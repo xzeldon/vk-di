@@ -4,7 +4,9 @@ export class Module {
     constructor(
         protected readonly client: IClient,
         public readonly config?: ICommandOptions
-    ) { }
+    ) {
+        this.init_events();
+    }
 
     protected init_events() {
         Object.getOwnPropertyNames(Object.getPrototypeOf(this)).forEach(method => {
