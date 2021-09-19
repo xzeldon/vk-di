@@ -1,7 +1,7 @@
-import { ICommandOptions } from "../common";
+import { EVENT_METADATA, ICommandOptions } from "../common";
 
-export function Command(name: string, options?: ICommandOptions): MethodDecorator {
+export function Command(trigger: string | RegExp, options?: ICommandOptions): MethodDecorator {
     return (target: object, key: string) => {
-        Reflect.defineMetadata('on:command', { name, options }, target, key);
+        Reflect.defineMetadata(EVENT_METADATA, { trigger, options }, target, key);
     };
 }
