@@ -28,6 +28,7 @@ export class Module {
                     this,
                     this[method]
                 );
+                this.logger.log(`${cli_colors.magenta_bright(method)} method mapped successfully`);
             }
         });
     }
