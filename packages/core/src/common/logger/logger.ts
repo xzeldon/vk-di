@@ -88,11 +88,11 @@ export class Logger implements ILogger {
     }
 
     static debug(message: any, context = '', is_time_diff_enabled = true) {
-        this.print_message(message, cli_colors.magentaBright, context, is_time_diff_enabled);
+        this.print_message(message, cli_colors.magenta_bright, context, is_time_diff_enabled);
     }
 
     static verbose(message: any, context = '', is_time_diff_enabled = true) {
-        this.print_message(message, cli_colors.cyanBright, context, is_time_diff_enabled);
+        this.print_message(message, cli_colors.cyan_bright, context, is_time_diff_enabled);
     }
 
     private call_func(name: 'log' | 'warn' | 'debug' | 'verbose', message: any, context?: string,) {

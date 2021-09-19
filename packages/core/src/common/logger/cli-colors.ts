@@ -7,8 +7,8 @@ export const cli_colors = {
     green: color_if_allowed((text: string) => `\x1B[32m${text}\x1B[39m`),
     yellow: color_if_allowed((text: string) => `\x1B[33m${text}\x1B[39m`),
     red: color_if_allowed((text: string) => `\x1B[31m${text}\x1B[39m`),
-    magentaBright: color_if_allowed((text: string) => `\x1B[95m${text}\x1B[39m`),
-    cyanBright: color_if_allowed((text: string) => `\x1B[96m${text}\x1B[39m`),
+    magenta_bright: color_if_allowed((text: string) => `\x1B[95m${text}\x1B[39m`),
+    cyan_bright: color_if_allowed((text: string) => `\x1B[96m${text}\x1B[39m`),
 };
 
 export const yellow = color_if_allowed((text: string) => `\x1B[38;5;3m${text}\x1B[39m`);
