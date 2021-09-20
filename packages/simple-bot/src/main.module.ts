@@ -14,7 +14,7 @@ export default class MainModule extends Module {
      * 
      * The order of the listeners is important.
      * By default one listener is available for each module for each event.
-     * To override this, pass the options object with 'next' argument as shown below.
+     * To override this, pass the object with 'next' argument as shown below.
      */
 
     /**
@@ -30,7 +30,7 @@ export default class MainModule extends Module {
 
     /**
      * 
-     * On any message recived console.log() some stuff
+     * On any message recived 'console.log()' some stuff
      */
     @On("message_new")
     on_message2() {
