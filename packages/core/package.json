@@ -38,6 +38,5 @@
     "dependencies": {
         "reflect-metadata": "^0.1.13",
         "vk-io": "^4.3.2"
-    },
-    "devDependencies": {}
+    }
 }
