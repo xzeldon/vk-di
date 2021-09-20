@@ -1,9 +1,16 @@
-import { Context, ContextSubTypes, ContextTypes, VK } from "vk-io";
+import { ContextSubTypes, ContextTypes, VK } from "vk-io";
 import { App } from "../../app/App";
 import { Module } from "../../module/Module";
 
+/**
+ * @param prefix Command prefix (The character that the command starts with e.g. "/")
+ * @param next Call the next middleware from the chain if true
+ * 
+ * Command options interface
+ */
 export interface ICommandOptions {
     prefix?: string;
+    next?: boolean;
 }
 
 export interface ILogger {

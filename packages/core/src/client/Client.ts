@@ -13,12 +13,12 @@ export class Client implements IClient {
     }
 
     initialize_vk_event(
-        event: { name: ContextTypes & ContextSubTypes; },
+        event: { name: ContextTypes & ContextSubTypes, options?: { next?: boolean; }; },
         module: Module,
         handler: () => any
     ): void {
-        this.bot.updates.on(event.name, (context) => {
-            handler.call(module, context);
+        this.bot.updates.on(event.name, (context, next) => {
+            handler.call(module, context, event.options?.next ? next() : undefined);
         });
     }
 
@@ -49,7 +49,7 @@ export class Client implements IClient {
 
         cmd_string = prefix === undefined ? command.trigger : `${prefix}${command.trigger}`;
 
-        this.bot.updates.on('message_new', (message: MessageContext) => {
+        this.bot.updates.on('message_new', (message: MessageContext, next) => {
             if (cmd_string instanceof RegExp) {
                 const passed = cmd_string.test(message.text!);
                 if (passed) {
@@ -61,6 +61,8 @@ export class Client implements IClient {
             if (message.text === cmd_string) {
                 handler.call(module, message);
             }
+
+            if (next) next();
         });
     }
 
