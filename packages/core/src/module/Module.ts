@@ -2,7 +2,7 @@ import { COMMAND_METADATA, EVENT_METADATA, IClient, ICommandOptions, Logger } fr
 import { cli_colors } from "../common/logger/cli-colors";
 
 export class Module {
-    private logger = new Logger('ModuleService');
+    private logger = new Logger('ModuleService', true);
 
     constructor(
         protected readonly client: IClient,
