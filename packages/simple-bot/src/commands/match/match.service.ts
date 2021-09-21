@@ -6,7 +6,7 @@ import { IMatchService } from "./match.interface";
  * and ascii colors
  */
 class MatchService implements IMatchService {
-    private readonly logger: Logger = new Logger("MatchService", false);
+    private readonly logger: Logger = new Logger("MatchService");
 
     send_match_msg(match_element: string) {
         this.logger.log(`${cli_colors.cyan_bright('New match:')} ${match_element}`);

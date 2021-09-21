@@ -17,7 +17,7 @@ export class Logger implements ILogger {
 
     constructor(
         protected context?: string,
-        private readonly isTimestampEnabled = true,
+        private readonly isTimestampEnabled = false,
     ) { }
 
     log(message: any, context?: string) {
