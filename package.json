@@ -8,7 +8,6 @@
         "node": ">=12.0.0"
     },
     "devDependencies": {
-        "@rollup/plugin-json": "^4.1.0",
         "@rollup/plugin-run": "^2.1.0",
         "@types/node": "^16.7.10",
         "esbuild": "^0.13.3",

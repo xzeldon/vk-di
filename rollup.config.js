@@ -1,4 +1,3 @@
-import jsonPlugin from '@rollup/plugin-json';
 import run from '@rollup/plugin-run';
 import esbuild from 'rollup-plugin-esbuild';
 
@@ -30,7 +29,6 @@ export default async () => (
             input: pathJoin(src, 'index.ts'),
             output: dist,
             plugins: [
-                jsonPlugin(),
                 esbuild({ experimentalBundling: true }),
                 dev && run()
             ],
