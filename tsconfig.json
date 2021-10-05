@@ -21,9 +21,6 @@
         "paths": {
             "@core/*": [
                 "./packages/core/src"
-            ],
-            "@simple-bot/*": [
-                "./packages/simple-bot/src/*"
             ]
         }
     },
