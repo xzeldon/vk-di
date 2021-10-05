@@ -19,7 +19,7 @@
         "typescript": "^4.4.2"
     },
     "scripts": {
-        "prepare": "yarn run rollup:build",
+        "prepare": "yarn run rollup:build && lerna run generate",
         "build": "yarn clean && yarn run rollup:build && lerna run generate",
         "watch": "yarn clean && yarn run rollup:watch",
         "clean": "rm -rf ./packages/*/dist",
