@@ -1,10 +1,10 @@
-import jsonPlugin from '@rollup/plugin-json';
-import typescriptPlugin from 'rollup-plugin-typescript2';
 import run from '@rollup/plugin-run';
+import esbuild from 'rollup-plugin-esbuild';
+import alias from "@rollup/plugin-alias";
+import resolve from "rollup-plugin-node-resolve";
 
-import { tmpdir } from 'os';
 import { builtinModules } from 'module';
-import { join as pathJoin } from 'path';
+import path, { join as pathJoin } from 'path';
 
 const MODULES = [
     'core',
@@ -15,10 +15,9 @@ const core_modules = builtinModules.filter(name => (
     !/(^_|\/)/.test(name)
 ));
 
-const cache_root = pathJoin(tmpdir(), '.rpt2_cache');
-
 const dev = process.env.ROLLUP_WATCH === 'true';
 
+const project_root_dir = path.resolve(__dirname);
 const get_module_path = path => (
     pathJoin(__dirname, 'packages', path)
 );
@@ -31,23 +30,20 @@ export default async () => (
 
         return {
             input: pathJoin(src, 'index.ts'),
+            output: dist,
             plugins: [
-                jsonPlugin(),
-                typescriptPlugin({
-                    cache_root,
-                    useTsconfigDeclarationDir: false,
-                    tsconfigOverride: {
-                        outDir: dist,
-                        rootDir: src,
-                        include: [src]
-                    }
+                alias({
+                    entries: [
+                        { find: '@core/*', replacement: "./packages/core/src/index.ts" }
+                    ]
                 }),
+                esbuild(),
                 dev && run()
             ],
             external: [
                 ...Object.keys(mod_package.dependencies || {}),
                 ...Object.keys(mod_package.peerDependencies || {}),
-                ...MODULES.map(moduleName => `@vk-io/${moduleName}`),
+                ...MODULES.map(moduleName => `@vk-di/${moduleName}`),
                 ...core_modules
             ],
             output: [{
