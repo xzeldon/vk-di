@@ -1,0 +1,30 @@
+{
+    "branches": [
+        "main"
+    ],
+    "plugins": [
+        [
+            "@semantic-release/commit-analyzer",
+            {
+                "preset": "angular",
+                "releaseRules": [
+                    {
+                        "type": "refactor",
+                        "release": "patch"
+                    },
+                    {
+                        "type": "style",
+                        "release": "patch"
+                    },
+                    {
+                        "scope": "no-release",
+                        "release": false
+                    }
+                ]
+            }
+        ],
+        "@semantic-release/release-notes-generator",
+        "@semantic-release/github"
+    ],
+    "extends": "semantic-release-monorepo"
+}
