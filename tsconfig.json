@@ -23,7 +23,7 @@
                 "./packages/core/src"
             ],
             "@simple-bot/*": [
-                "./packages/bot/src/*"
+                "./packages/simple-bot/src/*"
             ]
         }
     },
