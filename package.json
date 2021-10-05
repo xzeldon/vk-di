@@ -27,6 +27,6 @@
         "clean": "rm -rf ./packages/*/dist",
         "rollup:build": "NODE_ENV=production rollup -c rollup.config.js",
         "rollup:watch": "yarn run rollup:build -w",
-        "semantic-release": "lerna exec --concurrency 1 -- semantic-release -e semantic-release-monorepo --tag-format='@vk-di/${LERNA_PACKAGE_NAME}@\\${version}'"
+        "semantic-release": "lerna exec --concurrency 1 -- semantic-release -e semantic-release-monorepo --tag-format='${LERNA_PACKAGE_NAME}@\\${version}'"
     }
 }
