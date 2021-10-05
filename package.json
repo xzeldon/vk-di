@@ -20,8 +20,8 @@
     },
     "scripts": {
         "prepare": "yarn run rollup:build",
-        "build": "yarn clean && yarn run rollup:build",
-        "watch": "yarn run rollup:watch",
+        "build": "yarn clean && yarn run rollup:build && lerna run generate",
+        "watch": "yarn clean && yarn run rollup:watch",
         "clean": "rm -rf ./packages/*/dist",
         "rollup:build": "NODE_ENV=production rollup -c rollup.config.js",
         "rollup:watch": "yarn run rollup:build -w",

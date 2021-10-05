@@ -35,6 +35,9 @@
     "engines": {
         "node": ">=12.0.0"
     },
+    "scripts": {
+        "generate": "tsc -p tsconfig.build.json"
+    },
     "dependencies": {
         "dotenv-safe": "^8.2.0",
         "vk-io": "^4.4.0"
