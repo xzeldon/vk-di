@@ -7,11 +7,7 @@
         "name": "Timofey (xzeldon)",
         "email": "contact@zeldon.ru"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+git@github.com/xzeldon/vk-di.git",
-        "directory": "packages/core"
-    },
+    "repository": "https://github.com/xzeldon/vk-di",
     "keywords": [
         "vk",
         "api",
