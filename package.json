@@ -11,14 +11,16 @@
         "@rollup/plugin-json": "^4.1.0",
         "@rollup/plugin-run": "^2.1.0",
         "@types/node": "^16.7.10",
+        "esbuild": "^0.13.3",
         "lerna": "^4.0.0",
         "rollup": "^2.56.3",
+        "rollup-plugin-esbuild": "^4.5.0",
         "rollup-plugin-typescript2": "^0.30.0",
         "typescript": "^4.4.2"
     },
     "scripts": {
         "prepare": "yarn run rollup:build",
-        "build": "yarn run rollup:build",
+        "build": "yarn clean && yarn run rollup:build",
         "watch": "yarn run rollup:watch",
         "clean": "rm -rf ./packages/*/dist",
         "rollup:build": "NODE_ENV=production rollup -c rollup.config.js",
