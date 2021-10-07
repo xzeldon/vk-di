@@ -2399,11 +2399,6 @@ fastq@^1.6.0:
   dependencies:
     reusify "^1.0.4"
 
-fetch-blob@2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/fetch-blob/-/fetch-blob-2.1.2.tgz#a7805db1361bd44c1ef62bb57fb5fe8ea173ef3c"
-  integrity sha512-YKqtUDwqLyfyMnmbw8XD6Q8j9i/HggKtPEI+pZ1+8bvheBu78biSmNaXWusx1TauGqtUUGx/cBb1mKdq2rLYow==
-
 fetch-blob@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/fetch-blob/-/fetch-blob-3.1.2.tgz#6bc438675f3851ecea51758ac91f6a1cd1bacabd"
@@ -2464,16 +2459,6 @@ forever-agent@~0.6.1:
   resolved "https://registry.yarnpkg.com/forever-agent/-/forever-agent-0.6.1.tgz#fbc71f0c41adeb37f96c577ad1ed42d8fdacca91"
   integrity sha1-+8cfDEGt6zf5bFd60e1C2P2sypE=
 
-form-data-encoder@1.4.3:
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/form-data-encoder/-/form-data-encoder-1.4.3.tgz#b0975dbe5795676f211c0ff98e473eaf52b0db4a"
-  integrity sha512-ARLR/jJaj3+tlKkO7h1uvvjQcD6xCiKyg42hcG5Q4jv8uDa1IMPs81bM3BwI8BrqVEQxF9pX6tx0iLIzAvr31Q==
-
-form-data-encoder@^1.0.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/form-data-encoder/-/form-data-encoder-1.5.1.tgz#66508c51cc635691c68c5a7e207dba4619a7c092"
-  integrity sha512-o9RStqNROZ86N+eBlxKxY7knpTCwPIol1Q9tE864l7AxKee77d6BtkIHX0N0zUPcHTzHHLLcwl8b5CBWnm5AiQ==
-
 form-data-encoder@^1.5.1:
   version "1.5.3"
   resolved "https://registry.yarnpkg.com/form-data-encoder/-/form-data-encoder-1.5.3.tgz#3ca2a892e6734cbccc54ee34926b397a2fe6e23b"
@@ -2487,15 +2472,6 @@ form-data@~2.3.2:
     asynckit "^0.4.0"
     combined-stream "^1.0.6"
     mime-types "^2.1.12"
-
-formdata-node@^3.5.4:
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/formdata-node/-/formdata-node-3.7.0.tgz#b58942e617639a0ebea57227cfff8332a4020760"
-  integrity sha512-O3y7XoWwE4zRvI5e1yVPDHyDGtEgGEI10KxTbQeMbEEt+imR7uxbL5Z4BCaHz5M09d1pkrFaqeYc8beAce4VSw==
-  dependencies:
-    fetch-blob "2.1.2"
-    form-data-encoder "1.4.3"
-    node-domexception "1.0.0"
 
 formdata-node@^4.0.1:
   version "4.2.1"
@@ -5828,20 +5804,7 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-vk-io@^4.3.2:
-  version "4.3.2"
-  resolved "https://registry.yarnpkg.com/vk-io/-/vk-io-4.3.2.tgz#9108efce1654cc4a5525de02786175766869e5a2"
-  integrity sha512-9L532/3hxkqNhrK3NcHOQ1aiIPxIDExY+D/bwbJX6gE1zT+rVYAyteapXkYR8xuD9qCcgbDBBu8b+h5a1NFVOA==
-  dependencies:
-    abort-controller "^3.0.0"
-    debug "^4.3.2"
-    form-data-encoder "^1.0.1"
-    formdata-node "^3.5.4"
-    inspectable "^1.2.0"
-    middleware-io "^2.8.0"
-    node-fetch "^2.6.1"
-
-vk-io@^4.4.0:
+vk-io@^4.3.2, vk-io@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/vk-io/-/vk-io-4.4.0.tgz#ab6109f567da6cb2f42777b354001caf70328484"
   integrity sha512-jg5atOUHHXRxZ+CJOtN1baWAYrVLzKYGNsjZtQn6fNrQnkcYC7jXKBW2pXmQhZjNOVDvkooN/9koZOaoh3JOqw==
