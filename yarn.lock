@@ -1037,12 +1037,12 @@
   dependencies:
     slash "^3.0.0"
 
-"@rollup/plugin-run@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@rollup/plugin-run/-/plugin-run-2.1.0.tgz#688f7c588a9215f30845799f754b2b49a5703ac6"
-  integrity sha512-jMtIKu/MamhHsk9S+BQ8DR3D4WGWflgjPCODB3waYMdimyvd3efqTmX6jqclQAu+Ed7RBUvbpf4PtJ1ly1rdKA==
+"@rollup/plugin-run@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@rollup/plugin-run/-/plugin-run-3.0.1.tgz#e416e7acd3194f5685495cf873c92f38292cc1ba"
+  integrity sha512-wbYR1Ahz8ohYnlyXzpBTwhGWfs+OO/uZMjgpDGr8AgnL/XfoTbO7BuNYY8ncR/j/1dhCJo+NDuTRkIeCxE434Q==
   dependencies:
-    "@types/node" "14.0.26"
+    "@types/node" "14.18.30"
 
 "@rollup/pluginutils@^4.1.1":
   version "4.1.1"
@@ -1164,10 +1164,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.21.tgz#864b987c0c68d07b4345845c3e63b75edd143644"
   integrity sha512-DBZCJbhII3r90XbQxI8Y9IjjiiOGlZ0Hr32omXIZvwwZ7p4DMMXGrKXVyPfuoBOri9XNtL0UK69jYIBIsRX3QQ==
 
-"@types/node@14.0.26":
-  version "14.0.26"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.26.tgz#22a3b8a46510da8944b67bfc27df02c34a35331c"
-  integrity sha512-W+fpe5s91FBGE0pEa0lnqGLL4USgpLgs4nokw16SrBBco/gQxuua7KnArSEOd5iaMqbbSHV10vUDkJYJJqpXKA==
+"@types/node@14.18.30":
+  version "14.18.30"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.30.tgz#34c8d934fe86b6ee5c21c08fc1b7858599c84a5a"
+  integrity sha512-8OEyg4oc/CqN5+LbInKNLA8MfbGzbC+k8lVPePXazuwEVrVeQ9gwMDX00HJwWbC7syc1FWRU6Mow0Lm+mibHAQ==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
