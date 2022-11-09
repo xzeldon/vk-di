@@ -14,7 +14,7 @@
         "esbuild": "^0.13.3",
         "lerna": "^4.0.0",
         "rollup": "^2.56.3",
-        "rollup-plugin-esbuild": "^4.5.0",
+        "rollup-plugin-esbuild": "^5.0.0",
         "rollup-plugin-node-resolve": "^5.2.0",
         "semantic-release": "^18.0.0",
         "semantic-release-monorepo": "^7.0.5",
